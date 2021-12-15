@@ -1,0 +1,48 @@
+{% extends "home.html" %}
+
+
+
+
+{% block body %}
+<form class="form" method="post" action="/blog">
+ {% csrf_token %}   
+ <div class ="card mx-3 my-4">
+ <h1 class="text-center py-4" style="font-family:serif;color:;">convert think to text</h1>   
+ <div class="col my-2">
+    <input type="text" class="form-control" placeholder="auther name" name="auther"aria-label="auther name">
+  </div>
+  <div class="col my-2">
+    <input type="text" class="form-control" placeholder=" tital"name="tital" aria-label=" tital">
+ </div>
+
+ <div class="col my-2">
+    <input type="text" class="form-control"  placeholder="image url" name="img" aria-label="image url">
+  </div>
+  
+  <div class="col my-4">
+   
+  
+    <div class="mb-3">
+       <label for="exampleFormControlTextarea1" class="form-label mx-2">containt</label>
+  
+      
+       <textarea class="form-control" id="exampleFormControlTextarea1" name="containt" rows="20">          </textarea>
+    </div>
+    <div class="col my-2">
+    <input type="text" class="form-control"  placeholder="slug" name="slug" aria-label="slug">
+        
+    </div>
+    <label for="exampleFormControlTextarea1" class="form-label py-0">date</label>
+  
+    <div class="col my-2">
+        
+    <input type="date" class="form-control"  placeholder="date" name="date" aria-label="date">
+    </div>
+    <button type="submit" class="btn btn-primary px-3 mx-1">submit</button>
+  </div>
+   
+ </div>
+</form>
+
+
+{% endblock %}

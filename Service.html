@@ -1,0 +1,142 @@
+{% extends "home.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="collection-showcase">
+  <div class="div">
+    <div class="div-2"><h3>New Collection</h3></div>
+    <div class="div-3"><p>COLLECTION</p></div>
+    <a
+      href="https://images.unsplash.com/photo-1455587734955-081b22074882?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80/1000%C3%971000"
+      class="btn btn-primary"
+      data-name="button">SHOP</a>
+  </div>
+</div>
+<style>
+  .collection-showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+    height: 600px;
+    background-image: url(https://cdn.builder.io/api/v1/image/assets%2F89d6bbb44070475d9580fd22f21ef8f1%2F8e2f32d7885b4071882c543be9bba073?width=2000);
+    background-repeat: no-repeat;
+  }
+  .div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+    width: auto;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: auto;
+    position: relative;
+    margin-right: auto;
+    margin-left: 50px;
+    margin-bottom: 3px;
+  }
+  @media (max-width: 991px) {
+    .div {
+      margin-left: 20px;
+      margin-bottom: 0px;
+    }
+  }
+  .div-2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 0px;
+    line-height: normal;
+    height: auto;
+    text-align: left;
+    color: rgba(41, 41, 41, 1);
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  .div-3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    line-height: normal;
+    height: auto;
+    text-align: left;
+    color: rgba(41, 41, 41, 1);
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 0px;
+  }
+  .button {
+    flex-direction: column;
+    position: relative;
+    appearance: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    border-radius: 0px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+    align-self: center;
+    text-decoration: none;
+    z-index: 1000;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+</style>
+<script>
+  (() => {
+    const state = {};
+
+    // Function to update data bindings and loops
+    // call update() when you mutate state and need the updates to reflect
+    // in the dom
+    function update() {
+      document.querySelectorAll("[data-name='button']").forEach((el) => {
+        el.openLinkInNewTab = true;
+      });
+    }
+
+    // Update with initial state on first load
+    update();
+  })();
+</script>
+
+</body>
+</html>
+      
+      
+      
+      
+      
+      
+      
+
+
+  
+
+
+
+
+{% endblock body %}
